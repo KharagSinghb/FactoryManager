@@ -4,10 +4,10 @@ print("Welcome To Programming Principles Factory Manager Program :)")
 productcode = int(input("Enter the product code: "))
 if productcode < 100 :
     print("input less than 100. Input invalid")
-    Exit()
+    exit()
 elif productcode > 1000:
     print("input more than 1000. Input invalid")
-    Exit()
+    exit()
 else:
     print("product code accepted")
 # The product name
