@@ -1,6 +1,6 @@
 print("Welcome To Programming Principles Factory Manager Program :)")
 # The introduction
-# The productcode
+# The productccode
 productcode = int(input("Enter the product code: "))
 if productcode < 100 :
     print("input less than 100. Input invalid")
@@ -12,3 +12,5 @@ else:
     print("product code accepted")
 # The product name
 productname = input("Enter the name of the product :")
+# The manufacture cost
+costprice = float(input("Enter the manufacturing cost of the product"))
