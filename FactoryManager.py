@@ -14,3 +14,12 @@ else:
 productname = input("Enter the name of the product :")
 # The manufacture cost
 costprice = float(input("Enter the manufacturing cost of the product"))
+if costprice < 0:
+    print("Invalid manufacturing cost of the product")
+    exit()
+else :
+    print("The manufacturing cost of the product is ",costprice)
+# The stock level
+stocks = int(input("Enter the stock level of this product"))
+if stocks < 0:
+    print("Invalid stock level. Input a number greater or equal to zero")
