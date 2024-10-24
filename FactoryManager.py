@@ -1,25 +1,26 @@
-print("Welcome To Programming Principles Factory Manager Program :)")
+def main():
+    print("Welcome To Programming Principles Factory Manager Program :)")
 # The introduction
 # The productccode
-productcode = int(input("Enter the product code: "))
-if productcode < 100 :
-    print("input less than 100. Input invalid")
-    exit()
-elif productcode > 1000:
-    print("input more than 1000. Input invalid")
-    exit()
-else:
-    print("product code accepted")
+    productcode = int(input("Enter the product code: "))
+    if productcode < 100 :
+        print("input less than 100. Input invalid")
+        exit()
+    elif productcode > 1000:
+        print("input more than 1000. Input invalid")
+        exit()
+    else:
+        print("product code accepted")
 # The product name
-productname = input("Enter the name of the product :")
+    productname = input("Enter the name of the product :")
 # The manufacture cost
-costprice = float(input("Enter the manufacturing cost of the product"))
-if costprice < 0:
-    print("Invalid manufacturing cost of the product")
-    exit()
-else :
-    print("The manufacturing cost of the product is ",costprice)
+    costprice = float(input("Enter the manufacturing cost of the product"))
+    if costprice < 0:
+        print("Invalid manufacturing cost of the product")
+        exit()
+    else :
+        print("The manufacturing cost of the product is ",costprice)
 # The stock level
-stocks = int(input("Enter the stock level of this product"))
-if stocks < 0:
-    print("Invalid stock level. Input a number greater or equal to zero")
+    stocks = int(input("Enter the stock level of this product"))
+    if stocks < 0:
+        print("Invalid stock level. Input a number greater or equal to zero")
