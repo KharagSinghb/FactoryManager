@@ -24,6 +24,13 @@ class Product:
             self.monthly_stock.append((units_sold, self.stocks))  # Append current stock level even if negative
 
         return units_sold
+    
+    def calculate_profit_loss(self):
+            total_units_sold = sum(units_sold for units_sold, _ in self.monthly_stock)
+            total_units_manufactured = self.monthlyproduction * len(self.monthly_stock)
+            profit = (total_units_sold * self.sellprice) - (total_units_manufactured * self.costprice)
+            return profit
+
 
 
 
