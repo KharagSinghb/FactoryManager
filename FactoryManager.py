@@ -32,4 +32,4 @@ def main():
         print("Invalid stock level. Input a number greater or equal to zero")
 
     # create the instance product
-    product = Product(productcode, productname, costprice,stocks)        
+    product = Product(productcode, productname, costprice,sellprice,stocks)  
