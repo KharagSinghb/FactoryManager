@@ -8,12 +8,22 @@ class Product:
         self.sellprice = sellprice
         self.monthlyproduction = monthlyproduction
         self.stocks = stocks
-        self.monthly_stocks = []
+        self.monthly_stock = []
 
     def simulate_monthly_activity(self):
         # Simulate units sold within the range
         units_sold = random.randint(max(0, self.monthlyproduction - 10), 
                                      self.monthlyproduction + 10)    
+
+        # Update stock level
+        if self.stocks + self.monthlyproduction >= 0:
+            self.stocks += self.monthlyproduction - units_sold
+            # Store the month's units sold and current stock level
+            self.monthly_stock.append((units_sold, self.stocks))
+        else:
+            self.monthly_stock.append((units_sold, self.stocks))  # Append current stock level even if negative
+
+        return units_sold
 
 
 
