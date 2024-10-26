@@ -1,3 +1,5 @@
+import random
+
 def main():
     print("Welcome To Programming Principles Factory Manager Program :)")
 # The introduction
