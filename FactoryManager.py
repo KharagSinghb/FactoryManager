@@ -26,10 +26,16 @@ def main():
     if sellprice < 0:
         print("Entered selling price invalid")
         exit()        
+
+# manufacturing estimate 
+    monthlyproduction = int(input("what are the number of products manufactured in a month: "))       
+    if monthlyproduction < 0:
+        print("Invalid monthly production")
+        exit() 
 # The stock level
     stocks = int(input("Enter the stock level of this product"))
     if stocks < 0:
         print("Invalid stock level. Input a number greater or equal to zero")
 
     # create the instance product
-    product = Product(productcode, productname, costprice,sellprice,stocks)  
+    product = Product(productcode, productname, costprice,sellprice, monthlyproduction,stocks)  
