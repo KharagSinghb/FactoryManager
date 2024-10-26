@@ -47,7 +47,6 @@ class Product:
 
 
 
-
 def main():
     print("Welcome To Programming Principles Factory Manager Program :)")
 # The introduction
@@ -89,3 +88,14 @@ def main():
 
     # create the instance product
     product = Product(productcode, productname, costprice,sellprice, monthlyproduction,stocks)  
+
+    # Simulate monthly production and sales for 12 months
+    for _ in range(12):
+        product.simulate_monthly_activity()
+
+    # Display stock statement
+    product.display_stock_statement()
+
+
+if __name__ == "__main__":
+    main()
