@@ -31,6 +31,19 @@ class Product:
             profit = (total_units_sold * self.sellprice) - (total_units_manufactured * self.costprice)
             return profit
 
+    def display_stock_statement(self):
+        print(f"\nProduct Code: {self.productcode}")
+        print(f"Product Name: {self.productname}")
+        print(f"Sale Price: ${self.sellprice:.2f}")
+        print(f"Manufacture Cost: ${self.costprice:.2f}")
+        print(f"Initial Stock Level: {self.stocks}")
+        print("\nPredicted Monthly Stock for the next 12 months:")
+        print("Month | Units Sold | Stock Level")
+        for month in range(12):
+            units_sold, stock_level = self.monthly_stock[month]
+            print(f"{month + 1:5} | {units_sold:10} | {stock_level:11}")
+        profit = self.calculate_profit_loss()
+        print(f"\nTotal Profit/Loss: ${profit:.2f}")
 
 
 
