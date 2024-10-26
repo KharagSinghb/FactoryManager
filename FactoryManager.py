@@ -20,7 +20,12 @@ def main():
         exit()
     else :
         print("The manufacturing cost of the product is ",costprice)
+
+        
 # The stock level
     stocks = int(input("Enter the stock level of this product"))
     if stocks < 0:
         print("Invalid stock level. Input a number greater or equal to zero")
+
+    # create the instance product
+    product = Product(productcode, productname, costprice,stocks)        
