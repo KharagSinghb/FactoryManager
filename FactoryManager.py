@@ -1,5 +1,23 @@
 import random
 
+class Product:
+    def _init_(self,productcode,productname,costprice,sellprice,monthlyproduction,stocks):
+        self.productcode = productcode
+        self.productname = productname
+        self.costprice = costprice
+        self.sellprice = sellprice
+        self.monthlyproduction = monthlyproduction
+        self.stocks = stocks
+        self.monthly_stocks = []
+
+    def simulate_monthly_activity(self):
+        # Simulate units sold within the range
+        units_sold = random.randint(max(0, self.monthlyproduction - 10), 
+                                     self.monthlyproduction + 10)    
+
+
+
+
 def main():
     print("Welcome To Programming Principles Factory Manager Program :)")
 # The introduction
