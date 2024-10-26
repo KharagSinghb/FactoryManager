@@ -21,7 +21,11 @@ def main():
     else :
         print("The manufacturing cost of the product is ",costprice)
 
-        
+# the selling price
+    sellprice = float(input("enter the selling price of the product"))
+    if sellprice < 0:
+        print("Entered selling price invalid")
+        exit()        
 # The stock level
     stocks = int(input("Enter the stock level of this product"))
     if stocks < 0:
